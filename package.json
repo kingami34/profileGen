@@ -1,0 +1,19 @@
+{
+  "name": "profileGen",
+  "version": "1.0.0",
+  "description": "![MIT](https://img.shields.io/badge/license-MIT-brightgreen)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
