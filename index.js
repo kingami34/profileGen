@@ -3,8 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 //Questions for different types of employees
 function manager() {
-  inquirer
-    .prompt([
+  inquirer.prompt([
       {
         type: "input",
         message: "What is your name?",
