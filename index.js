@@ -29,9 +29,9 @@ function manager() {
     .then((answers) => {
       const manager = new Manager(
         answers.name,
-        answers.ID,
+        answers.id,
         answers.email,
-        answers.office
+        answers.office,
       );
     });
 }
@@ -65,7 +65,7 @@ function engineer() {
       answers.name,
       answers.ID,
       answers.email,
-      answers.github
+      answers.github,
       );
     });
 }
@@ -79,7 +79,7 @@ function intern() {
           {
             type: "input",
             message: "What is your employee ID?",
-            name: "ID",
+            name: "id",
           },
           {
             type: "input",
@@ -96,19 +96,23 @@ function intern() {
   .then((answers) => {
     const intern = new Intern(
       answers.name,
-      answers.ID,
+      answers.id,
       answers.email,
-      answers.school
+      answers.school,
       );
     });
 }
-function menuAsk() {
+function menuAsk(){
 
 }
 function buildTeam() {
     
 }
 
+fs.writeFile('./lib/Employee.js','./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
+err ? console.error(err) : console.log('Thank you!')
+);
+   
 
  
  
