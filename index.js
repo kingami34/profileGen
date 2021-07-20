@@ -41,81 +41,81 @@ function manager() {
 }
 
 manager()
-// function engineer() {
-//   inquirer.prompt([{
-//         type: "input",
-//         message: "What is your name?",
-//         name: "name",
-//       },
-//       {
-//         type: "input",
-//         message: "What is your employee ID?",
-//         name: "ID",
-//       },
-//       {
-//         type: "input",
-//         message: "What is your email",
-//         name: "email"
-//       },
-//       {
-//         type: "input",
-//         message: "What is your GitHub username?",
-//         name: "githud",
-//       },
-//     ])
-//     engineer()
-//     //Creating a new instance
-//     .then((answers) => {
-//       const engineer = new Engineer(
-//         answers.name,
-//         answers.ID,
-//         answers.email,
-//         answers.github,
-//       );
-//     });
-// }
-// engineer()
-// function intern() {
-//   inquirer.prompt([{
-//         type: "input",
-//         message: "What is your name?",
-//         name: "name",
-//       },
-//       {
-//         type: "input",
-//         message: "What is your employee ID?",
-//         name: "id",
-//       },
-//       {
-//         type: "input",
-//         message: "What is your email?",
-//         name: "email",
-//       },
-//       {
-//         type: "input",
-//         message: "What school did you attend?",
-//         name: "school",
-//       },
-//     ])
-//     //Creating a new instance
-//     .then((answers) => {
-//       const intern = new Intern(
-//         answers.name,
-//         answers.id,
-//         answers.email,
-//         answers.school,
-//       );
-//     });
-// }
-// intern()
+function engineer() {
+  inquirer.prompt([{
+        type: "input",
+        message: "What is your name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is your employee ID?",
+        name: "ID",
+      },
+      {
+        type: "input",
+        message: "What is your email",
+        name: "email"
+      },
+      {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "githud",
+      },
+    ])
+    engineer()
+    //Creating a new instance
+    .then((answers) => {
+      const engineer = new Engineer(
+        answers.name,
+        answers.ID,
+        answers.email,
+        answers.github,
+      );
+    });
+}
+engineer()
+function intern() {
+  inquirer.prompt([{
+        type: "input",
+        message: "What is your name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is your employee ID?",
+        name: "id",
+      },
+      {
+        type: "input",
+        message: "What is your email?",
+        name: "email",
+      },
+      {
+        type: "input",
+        message: "What school did you attend?",
+        name: "school",
+      },
+    ])
+    //Creating a new instance
+    .then((answers) => {
+      const intern = new Intern(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.school,
+      );
+    });
+}
+intern()
 
-// // function menuAsk() {
+// function menuAsk() {
   
-// // }
+// }
 
-// // function buildTeam() {
+// function buildTeam() {
 
-// // }
+// }
 
 
 // fs.writeFileSync('./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
