@@ -1,4 +1,4 @@
-const employee = require('../lib/Employee');
+const Employee = require('../lib/Employee');
 
 
 test("Can enter Employee instance", () => {
