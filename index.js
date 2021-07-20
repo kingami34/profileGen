@@ -118,6 +118,10 @@ intern()
 // }
 
 
-// fs.writeFileSync('./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
-// err ? console.error(err) : console.log('Thank you!')
-// );
+inquirer.prompt(prompts).ui.process.manager(onEachAnswer, onError, onComplete);
+inquirer.prompt(prompts).ui.process.engineer(onEachAnswer, onError, onComplete);
+inquirer.prompt(prompts).ui.process.intern(onEachAnswer, onError, onComplete);
+
+fs.writeFileSync('./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
+err ? console.error(err) : console.log('Thank you!')
+);
