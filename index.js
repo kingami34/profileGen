@@ -37,6 +37,7 @@ function manager() {
         answers.email,
         answers.office,
       );
+      console.info('answers:' , answers.name, answers.id, answers.email, answers.github)
     });
 }
 
@@ -67,10 +68,11 @@ function engineer() {
     .then((answers) => {
       const engineer = new Engineer(
         answers.name,
-        answers.ID,
+        answers.id,
         answers.email,
         answers.github,
       );
+      console.info('answers:' , answers.name, answers.id, answers.email, answers.github)
     });
 }
 engineer()
@@ -104,6 +106,7 @@ function intern() {
         answers.email,
         answers.school,
       );
+      console.info('answers:' , answers.name, answers.id, answers.email, answers.school)
     });
 }
 intern()
@@ -116,11 +119,9 @@ intern()
 
 // }
 
+// 
 
-// inquirer.prompt(prompts).ui.process.manager(onEachAnswer, onError, onComplete);
-// inquirer.prompt(prompts).ui.process.engineer(onEachAnswer, onError, onComplete);
-// inquirer.prompt(prompts).ui.process.intern(onEachAnswer, onError, onComplete);
 
-fs.writeFileSync('./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
-err ? console.error(err) : console.log('Thank you!')
-);
+// fs.writeFileSync('./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
+// err ? console.error(err) : console.log('Thank you!')
+// );
