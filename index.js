@@ -37,7 +37,7 @@ function manager() {
         answers.email,
         answers.office,
       );
-      console.info('answers:' , answers.name, answers.id, answers.email, answers.github)
+      menuAsk()
     });
 }
 
@@ -72,10 +72,10 @@ function engineer() {
         answers.email,
         answers.github,
       );
-      console.info('answers:' , answers.name, answers.id, answers.email, answers.github)
+      menuAsk()
     });
 }
-engineer()
+
 function intern() {
   inquirer.prompt([{
         type: "input",
@@ -106,18 +106,36 @@ function intern() {
         answers.email,
         answers.school,
       );
-      console.info('answers:' , answers.name, answers.id, answers.email, answers.school)
+      menuAsk()
     });
 }
-intern()
 
-// function menuAsk() {
-  
-// }
 
-// function buildTeam() {
+function menuAsk() {
+  inquirer.prompt([
+    {
+      choices:["Create an engineer", "Create an intern", "Build a team"],
+      name: "menu",
+      message: "Whats the next step creating our team?",
+      type: "list",
+    }
+  ])
+  .then((answers) =>{
+    if (answers.menu === "Create an engineer"){
+      engineer()
+ 
+    }
+    else if (answers.menu === "Create an intern") {
+      intern()
+    } else {
+      buildTeam()
+    }
+  }) 
+}
 
-// }
+function buildTeam() {
+ console.log("Success")
+}
 
 // 
 
