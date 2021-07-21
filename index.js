@@ -143,3 +143,96 @@ function buildTeam() {
 // fs.writeFileSync('./lib/Engineer.js', './lib/Intern.js','./lib/manager.js', (err) =>
 // err ? console.error(err) : console.log('Thank you!')
 // );
+function startHtml(){
+  const html = `<div class="container">
+  <div class="card" style="width: 18rem;">
+      <div>
+          <h5 class="card-header">Caleb<br>Manager</h5>
+      </div>
+      <ul class="list-group list-group-flush ">
+          <li class="ID">ID:</li>
+          <li class="Email">Email:</li>
+          <li class="Office">Office 206-555-1212:</li>
+      </ul>
+  </div>`
+  
+
+  fs.writeFileSync("./index.html", html, function(err){
+    if(err){
+      console.log(err);
+    }
+  })
+  console.log('start')
+}
+function addHtml() {
+  return new Promise(function(resolve, reject) {
+      const name = this.getName();
+      const role = getRole();
+      const id = this.getId();
+      const email = this.getEmail();
+      let data = "";
+      if (role === "Engineer") {
+          const github = this.github();
+          data = `<div class="card" style="width: 18rem;">
+          <div>
+              <h5 class="card-header">Dechanel<br>Engineer</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="ID">ID:</li>
+              <li class="Email">Email:</li>
+              <li class="Github">Github: Dechanl@Github.com</li>
+          </ul>
+      </div>`;
+      
+      } else if  (role === Intern){
+          const school = this.school();
+          data = `<div class="card" style="width: 18rem;">
+          <div>
+              <h5 class="card-header">Jayden<br>Intern</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="ID">ID:</li>
+              <li class="Email">Email:</li>
+              <li class="School">School: LSU</li>
+          </ul>
+      </div>`;
+      } else {
+        const office = this.office();
+        data = `<div class="container">
+        <div class="card" style="width: 18rem;">
+            <div>
+                <h5 class="card-header">Caleb<br>Manager</h5>
+            </div>
+            <ul class="list-group list-group-flush ">
+                <li class="ID">ID:</li>
+                <li class="Email">Email:</li>
+                <li class="Office">Office 206-555-1212:</li>
+            </ul>
+        </div>`
+      }
+      console.log("adding team member");
+      fs.writeFileSync("./index.html", data, function (err) {
+          if (err) {
+              return reject(err);
+          };
+          return resolve();
+      });
+  });
+  
+}
+function finishHtml() {
+  const html = ` </div>
+  </div>
+  
+</body>
+</html>`;
+
+  fs.writeFileSync("./index.html", html, function (err) {
+      if (err) {
+          console.log(err);
+      };
+      // return finishHtml()
+  });
+  console.log("end");
+}
+   
