@@ -1,4 +1,4 @@
-# Readme
+# profileGen
 
 ![apache](https://img.shields.io/badge/license-apache-brightgreen)
 
